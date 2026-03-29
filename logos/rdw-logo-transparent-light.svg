@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" width="800" height="160">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&amp;display=swap');
+      .logo-text { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 72px; letter-spacing: -0.02em; }
+    </style>
+  </defs>
+  <text x="400" y="113" text-anchor="middle" class="logo-text" fill="#F9F7F2">Rarely Done Well<tspan fill="#8B0000">.</tspan></text>
+</svg>

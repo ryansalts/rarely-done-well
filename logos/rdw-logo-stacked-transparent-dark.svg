@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 340" width="500" height="340">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&amp;display=swap');
+      .logo-text { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 80px; letter-spacing: -0.02em; }
+    </style>
+  </defs>
+  <text x="250" y="115"  text-anchor="middle" class="logo-text" fill="#1A1A1B">Rarely</text>
+  <text x="250" y="205"  text-anchor="middle" class="logo-text" fill="#1A1A1B">Done</text>
+  <text x="250" y="295"  text-anchor="middle" class="logo-text" fill="#1A1A1B">Well<tspan fill="#8B0000">.</tspan></text>
+</svg>
