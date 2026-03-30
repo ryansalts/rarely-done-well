@@ -1,5 +1,5 @@
 /* ============================================================
-   RARELY, DONE WELL. — Shared Stylesheet
+   RARELY DONE WELL. — Shared Stylesheet
    ============================================================ */
 
 :root {
@@ -164,13 +164,14 @@ body.page-form {
 }
 
 /* --- HERO (index page) --- */
-.hero { padding: 180px 0 80px; border-bottom: 1px solid var(--ink-black); }
+.hero { padding: 0 0 80px; border-bottom: 1px solid var(--ink-black); }
 .hero h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1; margin-bottom: 3rem; max-width: 1000px; }
 .hero-lead { column-count: 2; column-gap: 4rem; margin-top: 2rem; }
 .hero-lead p { font-size: 1.25rem; margin-bottom: 1.5rem; text-align: justify; }
 
 /* --- ECOSYSTEM SECTION (index page) --- */
 .ecosystem-header { padding: 80px 0 40px; border-bottom: 1px solid var(--hairline); }
+.ecosystem-header .container { padding-left: 2rem; padding-right: 2rem; }
 .section-label { font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--action-red); text-transform: uppercase; margin-bottom: 1rem; display: block; }
 
 .ecosystem-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--ink-black); }
@@ -190,18 +191,77 @@ body.page-form {
     display: block;
 }
 
-/* --- IMAGE STRIP (index page) --- */
-.image-strip {
-  width: 100%; height: 500px;
-  background: #3a3a3a url('https://images.pexels.com/photos/5779820/pexels-photo-5779820.jpeg?auto=compress&w=1600') center/cover;
-  filter: grayscale(100%) contrast(120%);
+/* --- HERO PHOTO BAND (index, partners, learn-more) --- */
+/* Wraps only the section-label + h1. Apply inline background-image on the element. */
+.hero-photo-band {
+  position: relative;
+  min-height: 480px;
+  padding-top: 90px; /* offsets fixed nav so photo starts flush beneath it */
+  display: flex;
+  align-items: center; /* text vertically centered at all sizes */
+  background-color: var(--ink-black); /* fallback if image hasn't loaded */
+  background-size: cover;
+  background-position: center 40%; /* biases toward subject, away from ceiling */
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--ink-black);
+  overflow: hidden;
+}
+
+/* Grayscale + contrast on a pseudo-element so the filter doesn't hit the text */
+.hero-photo-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: grayscale(100%) contrast(120%);
+  z-index: 0;
+}
+
+/* Dark overlay for legibility — sits above the filtered photo */
+.hero-photo-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 27, 0.55);
+  z-index: 1;
+}
+
+/* Inner container — matches .container spacing so text aligns with content below */
+.hero-photo-band__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 2rem; /* even padding — vertical centering handled by flexbox */
+}
+
+/* Text color inside the band */
+.hero-photo-band h1,
+.hero-photo-band h2 {
+  color: var(--newsprint);
+  text-align: left;
+}
+
+.hero-photo-band .section-label {
+  color: var(--newsprint);
+  text-align: left;
+}
+
+/* Responsive step-downs */
+@media (max-width: 768px) {
+  .hero-photo-band { min-height: 380px; align-items: center; }
+  .hero-photo-band__inner { text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .hero-photo-band { min-height: 300px; }
 }
 
 /* --- FINAL CALL (index page) --- */
-.final-call { padding: 120px 0; text-align: center; }
+.final-call { padding: 80px 0; text-align: center; }
 .final-call h2 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 2rem; }
-.final-call-body { font-size: 1.15rem; max-width: 600px; margin: 0 auto 3rem; }
+.final-call-body { font-size: 1.15rem; max-width: 600px; margin: 0 auto 3rem; text-align: left; }
 
 /* --- FOOTER (index page) --- */
 footer { padding: 4rem 0; border-top: 1px solid var(--ink-black); }
@@ -218,15 +278,15 @@ footer { padding: 4rem 0; border-top: 1px solid var(--ink-black); }
 
 /* --- PARTNERS PAGE --- */
 
-.partners-hero { padding: 180px 0 100px; border-bottom: 1px solid var(--ink-black); }
-.partners-hero h1 { font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.95; letter-spacing: -0.03em; max-width: 800px; margin-bottom: 1.5rem; }
-.partners-hero-sub { font-size: 1.2rem; max-width: 640px; line-height: 1.7; }
+.partners-hero { padding: 0; border-bottom: 1px solid var(--ink-black); }
+.partners-hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.05; max-width: 900px; margin-bottom: 0; }
+.partners-hero-sub { font-size: 1.2rem; max-width: 640px; line-height: 1.7; padding: 3rem 0 4rem; margin: 0 auto; }
 
 /* Engagement grid — 2 col pairs + full-width expansion card at bottom */
-.partners-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-bottom: 1px solid var(--ink-black); }
+.partners-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--ink-black); border-left: 1px solid var(--ink-black); border-right: 1px solid var(--ink-black); }
 .partners-card { padding: 4rem 3rem; border-right: 1px solid var(--ink-black); border-bottom: 1px solid var(--ink-black); display: flex; flex-direction: column; gap: 1.5rem; }
 .partners-card:nth-child(even):not(.partners-card--full) { border-right: none; }
-.partners-card--full { grid-column: 1 / -1; border-right: none; border-bottom: none; }
+.partners-card--full { grid-column: 1 / -1; border-right: none; border-bottom: 1px solid var(--ink-black); }
 .partners-card-number { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--action-red); text-transform: uppercase; letter-spacing: 0.12em; }
 .partners-card h3 { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1.1; }
 .partners-card p { font-size: 1.05rem; line-height: 1.75; flex-grow: 1; }
@@ -290,7 +350,7 @@ footer { padding: 4rem 0; border-top: 1px solid var(--ink-black); }
 /* --- LEARN MORE PAGE --- */
 
 /* Intro hero */
-.lm-hero { padding: 180px 0 100px; border-bottom: 1px solid var(--ink-black); }
+.lm-hero { padding: 0; border-bottom: 1px solid var(--ink-black); }
 .lm-hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.05; max-width: 900px; margin-bottom: 0; }
 
 /* Stat bar */
@@ -299,7 +359,7 @@ footer { padding: 4rem 0; border-top: 1px solid var(--ink-black); }
 .lm-stat-inner--four { grid-template-columns: repeat(4, 1fr); }
 .lm-stat { padding: 4rem 2rem; border-right: 1px solid var(--ink-black); display: flex; flex-direction: column; gap: 0.75rem; }
 .lm-stat:last-child { border-right: none; }
-.lm-stat-number { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; line-height: 1; }
+.lm-stat-number { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 900; line-height: 1; }
 .lm-stat-number span { color: var(--action-red); }
 .lm-stat-label { font-family: 'Space Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.6; }
 
@@ -335,9 +395,11 @@ footer { padding: 4rem 0; border-top: 1px solid var(--ink-black); }
 .lm-cta-card .btn-cta { display: inline-block; margin-top: 1rem; }
 
 @media (max-width: 992px) {
-  .lm-stat-inner { grid-template-columns: 1fr; }
+  .lm-stat-inner { grid-template-columns: repeat(2, 1fr); }
   .lm-stat-inner--four { grid-template-columns: repeat(2, 1fr); }
-  .lm-stat { border-right: none; border-bottom: 1px solid var(--ink-black); }
+  .lm-stat { border-right: 1px solid var(--ink-black); border-bottom: 1px solid var(--ink-black); }
+  .lm-stat:nth-child(even) { border-right: none; }
+  .lm-stat:last-child { border-right: none; }
   .lm-section-inner { grid-template-columns: 1fr; gap: 1.5rem; }
   .lm-alumni-grid { grid-template-columns: repeat(3, 1fr); }
   .lm-cta-grid { grid-template-columns: 1fr; }
@@ -347,6 +409,11 @@ footer { padding: 4rem 0; border-top: 1px solid var(--ink-black); }
 
 @media (max-width: 600px) {
   .lm-alumni-grid { grid-template-columns: repeat(2, 1fr); }
+  .lm-stat-inner,
+  .lm-stat-inner--four { grid-template-columns: 1fr; }
+  .lm-stat { border-right: none; border-bottom: 1px solid var(--ink-black); }
+  .lm-stat:nth-child(even) { border-right: none; }
+  .lm-stat:last-child { border-bottom: none; }
 }
 
 /* --- ANIMATIONS --- */
