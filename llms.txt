@@ -2,13 +2,29 @@
 
 > An entrepreneurship ecosystem for founders building physical goods and hospitality brands. Based in San Antonio, serving South Texas. Est. 2026.
 
-Rarely Done Well supports founders through three programs: The Community (monthly membership, mentorship, meetups), The Accelerator (10-week cohort program, Spring and Fall, for founders 0–2 years in), and The Incubator (year-long strategic partnership for brands seeking scale). The organization has a 10+ year track record, 27,000+ entrepreneurs supported, $10M+ in capital facilitated, and a 1:63 return on investment. It has received national recognition including an SBA Accelerate Growth Competition win and a Presidential Proclamation. Institutional partnerships include the City of San Antonio, Lift Fund, LISC, and Kroger.
+Rarely Done Well is led by entrepreneurs with deep hands-on experience in physical goods and hospitality. It supports founders through three programs that form a natural progression: The Community is the entry point (open to any founder at any stage), The Accelerator is a structured 10-week cohort for founders 0–2 years in, and The Incubator is a year-long one-on-one strategic partnership for brands actively seeking scale. A founder can participate in one or all three depending on where they are in building their business.
+
+The target audience across all three programs is founders building physical goods, food, beverage, or hospitality brands — primarily in San Antonio and South Texas, though partner engagements extend nationally.
+
+In addition to its founder-facing programs, Rarely Done Well offers institutional services for cities, economic development corporations, corporations, and policymakers — including program design, ecosystem consulting, policy advisory, corporate innovation frameworks, and licensing of proven programming to other markets.
+
+## Programs
+
+**The Community** — $84/year membership. Monthly meetups, a curated mentor network, and a monthly newsletter. Open to any founder in food, beverage, or hospitality, whether pre-launch or already operating. Student discounts available. Best for founders who want connection and ongoing support without a structured program commitment.
+
+**The Accelerator** — 10-week cohort program, offered Spring and Fall. Approximately 30 sessions covering knowledge, network, and operating foundation. For entrepreneurs 0–2 years in operation, or established owners rebuilding on a stronger foundation. Pricing: $1,800 full price, $600/month payment plan, $1,200 early bird or referral (limited spots), $900 student pricing, and two full scholarships awarded per cohort. Includes a money-back guarantee — if a participant completes the program and finds no tangible value, they receive a full refund. Based in San Antonio.
+
+**The Incubator** — Year-long strategic partnership structured as a monthly retainer starting at $750, scoped to each participant's needs. Not a cohort — fully individualized. For brands actively seeking scale across the whole business or within a specific vertical. Participant count is kept intentionally small. Entry is by conversation, not application.
+
+## Partner Services
+
+Rarely Done Well works with institutions on: economic development programming (Government & EDC), policy and advocacy advisory, corporate innovation and supplier diversity, full ecosystem design, and expansion/licensing of proven frameworks to other markets. The engagement is direct — no forms, conversation-first.
 
 ## Pages
 
 - [Home](https://www.rarelydonewell.com/): Mission, manifesto, and ecosystem overview
-- [The Background](https://www.rarelydonewell.com/learn-more.html): Origin story, methodology, track record, and alumni brands
-- [The Community](https://www.rarelydonewell.com/community.html): Monthly membership — $84/year, for physical goods and hospitality founders in San Antonio
-- [The Accelerator](https://www.rarelydonewell.com/accelerator.html): 10-week cohort program — $1,800 full price, Spring and Fall cohorts, money-back guarantee
-- [The Incubator](https://www.rarelydonewell.com/incubator.html): Year-long strategic partnership — starting at $750/month retainer, inquiry only
-- [For Partners](https://www.rarelydonewell.com/partners.html): Institutional partnerships — government, EDC, corporate innovation, policy, and ecosystem design
+- [The Background](https://www.rarelydonewell.com/learn-more.html): Origin story, methodology, and alumni brands
+- [The Community](https://www.rarelydonewell.com/community.html): Monthly membership — $84/year
+- [The Accelerator](https://www.rarelydonewell.com/accelerator.html): 10-week cohort program — Spring and Fall, money-back guarantee
+- [The Incubator](https://www.rarelydonewell.com/incubator.html): Year-long strategic partnership — inquiry only
+- [For Partners](https://www.rarelydonewell.com/partners.html): Institutional services — economic development, ecosystem design, policy, corporate innovation
